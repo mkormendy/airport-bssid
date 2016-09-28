@@ -1,19 +1,11 @@
 airport-bssid
 =============
 
-If you want to get associated to a specific bssid with Mac OS, use this one.
+This tool helps MacOS connect to a specific WIFI access point by its BSSID.
 
 ============
-### にほんごで (ちょっと宣伝も)
+Recent changes to the Mac/OS/X airport command (>10.6) have removed the ability for selecting which access point to connect to by its BSSID. When Interop Tokyo started using a connected STM WIFI network in 2013, there were many access points overlapping each other which caused connectivity problems. Shintaro Tanaka created a tool that can re-associate the Mac operating system to specific BSSIDs on the network.
 
-最近のMacのairportコマンドではBSSID指定でAPに接続できなくなっています。
-qpSHiNqpが[Interop Tokyo](http://www.interop.jp) 2013にSTMとして参加していた際に, このことが原因で困ったのでBSSID指定でAssocできるツールをつくりました。
+The Interop Tokyo is an insanely huge exhibition network called ShowNet. Visitors and exhibitors installed a huge number of AP to use. These overlapping access points had several different WIFI security policies, yet shared the same SSID. For ease of use it was preferred to have the same SSID for each access point without the user having to know which access point to connect to. On the other hand, the users needed to connect to specific access points based on their requirements, and they needed a way to test for the individual access point, from both the SSID and the specific BSSID, obtained in advance by performing association at the BSSID level.
 
-Interop TokyoにはShowNetと呼ばれるめちゃくちゃでかい展示ネットワークが構築され, 来場者や出展者などが利用する膨大な数のAPが設置されます.
-これらのAPは, 数種類の異なるポリシーのWiFiを吹いているのですが, 当然同じポリシーのものは同じESSID (通常SSIDと呼ばれる) で提供されます. ESSIDはユーザが個々のAPの設定を意識せずにWiFiを利用できるようにするある種の隠匿/カプセル化のための仕組みです.
-一方, ネットワーク構築部隊的には, 個々のAPレベルでの接続性テストを行う業務も生じるので, 事前に得たAPとBSSIDの関連から, BSSIDレベルでのAssociationを行ってAPレベルで疎通性チェックが可能となっていることが望まれます.
-
-このような経緯から, 2013年に私が作ったツールをgithubに上げたのですが, なぜかここ数ヶ月, 外国のユーザからissue報告が上がってきたり, 遂にInterop Tokyo 2016のネットワーク構築期間もスタートしたことから久々にメンテしようと思い立ちました.
-不完全な部分もあるかと思いますが, もしバグを見つけたらIssue報告, もし気に入っていただけたら, Star付けて頂けると私のこの上ない喜びとなります.
-特に, 幕張組からのIssue報告はできるだけ即日で対応します. 今年もがんばってください.
-
+This is the reason for creating this tool. I published it to github in 2013. In the past few months, it has gained popularity again as the Interop Tokyo  2016 stood I tried to maintenance after a long time since it was. I think also that it is an incomplete part, but if you find a bug Issue report, if you like if, will be my bliss and enjoy it with Star. in particular, , Issue reports from Makuhari assembly corresponds as much as possible on the same day. please do your best this year.
